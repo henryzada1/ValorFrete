@@ -45,10 +45,9 @@ namespace ValorFrete.view
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Swis721 Hv BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(221, 29);
+            this.lblTitulo.Location = new System.Drawing.Point(287, 41);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(209, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(92, 15);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cálculo de Frete";
             // 
@@ -92,12 +91,10 @@ namespace ValorFrete.view
             // 
             this.lblValorFrete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblValorFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblValorFrete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblValorFrete.Location = new System.Drawing.Point(85, 258);
             this.lblValorFrete.Name = "lblValorFrete";
             this.lblValorFrete.Size = new System.Drawing.Size(453, 158);
             this.lblValorFrete.TabIndex = 5;
-            this.lblValorFrete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cboUF1
             // 
