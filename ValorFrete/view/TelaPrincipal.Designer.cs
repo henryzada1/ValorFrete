@@ -81,7 +81,7 @@ namespace ValorFrete.view
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(419, 155);
+            this.lblEstado.Location = new System.Drawing.Point(379, 155);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(24, 15);
             this.lblEstado.TabIndex = 4;
@@ -91,15 +91,18 @@ namespace ValorFrete.view
             // 
             this.lblValorFrete.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblValorFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblValorFrete.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblValorFrete.Location = new System.Drawing.Point(85, 258);
             this.lblValorFrete.Name = "lblValorFrete";
             this.lblValorFrete.Size = new System.Drawing.Size(453, 158);
             this.lblValorFrete.TabIndex = 5;
+            this.lblValorFrete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cboUF1
             // 
             this.cboUF1.FormattingEnabled = true;
             this.cboUF1.Items.AddRange(new object[] {
+            "Escolha UF",
             "AC",
             "AM",
             "BA",
@@ -125,14 +128,15 @@ namespace ValorFrete.view
             "SP",
             "SE",
             "TO"});
-            this.cboUF1.Location = new System.Drawing.Point(466, 152);
+            this.cboUF1.Location = new System.Drawing.Point(423, 152);
             this.cboUF1.Name = "cboUF1";
-            this.cboUF1.Size = new System.Drawing.Size(72, 23);
+            this.cboUF1.Size = new System.Drawing.Size(115, 23);
             this.cboUF1.TabIndex = 6;
+            this.cboUF1.SelectedIndexChanged += new System.EventHandler(this.cboUF1_SelectedIndexChanged);
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(454, 200);
+            this.btnCalcular.Location = new System.Drawing.Point(436, 197);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(84, 23);
             this.btnCalcular.TabIndex = 7;
@@ -151,15 +155,17 @@ namespace ValorFrete.view
             // 
             this.tbValor.Location = new System.Drawing.Point(152, 152);
             this.tbValor.Name = "tbValor";
-            this.tbValor.Size = new System.Drawing.Size(199, 23);
+            this.tbValor.Size = new System.Drawing.Size(139, 23);
             this.tbValor.TabIndex = 9;
+            this.tbValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbPorcFrete
             // 
             this.tbPorcFrete.Location = new System.Drawing.Point(152, 197);
             this.tbPorcFrete.Name = "tbPorcFrete";
-            this.tbPorcFrete.Size = new System.Drawing.Size(103, 23);
+            this.tbPorcFrete.Size = new System.Drawing.Size(139, 23);
             this.tbPorcFrete.TabIndex = 10;
+            this.tbPorcFrete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TelaPrincipal
             // 
@@ -177,8 +183,11 @@ namespace ValorFrete.view
             this.Controls.Add(this.lblValor);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblTitulo);
+            this.KeyPreview = true;
             this.Name = "TelaPrincipal";
             this.Text = "Sistema de Cálculo de Frete";
+            this.Load += new System.EventHandler(this.TelaPrincipal_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelaPrincipal_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
